@@ -25,7 +25,7 @@ public class FileArray {
 	 * @param array    The array to write.
 	 * @exception IOException When an IO error occurs.
 	 */
-	public void writeArray(
+	public void write(
 			int[] array) throws IOException {
 		// Write the array.
 		for (int index = 0; index < array.length; index++)
