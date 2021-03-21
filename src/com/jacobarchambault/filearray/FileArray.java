@@ -21,10 +21,8 @@ public class FileArray {
 	public static void writeArray(String filename,
 			int[] array) throws IOException {
 		// Open the file.
-		FileOutputStream fstream = new FileOutputStream(
+		DataOutputStream outFile = new DataOutputStream(new FileOutputStream(
 				filename);
-		DataOutputStream outFile = new DataOutputStream(
-				fstream);
 		// Write the array.
 		for (int index = 0; index < array.length; index++)
 			outFile.writeInt(array[index]);
