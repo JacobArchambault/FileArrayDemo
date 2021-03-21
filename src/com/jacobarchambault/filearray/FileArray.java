@@ -53,4 +53,15 @@ public class FileArray {
 		// Close the file.
 		outFile.close();
 	}
+
+	static void display(
+			int[] test) {
+		// Display the characters.
+		System.out.println(
+				"The numbers read from the file are:");
+		for (int i = 0; i < test.length; i++)
+			System.out.print(
+					test[i] + " ");
+	}
+
 }

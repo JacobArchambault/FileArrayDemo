@@ -25,21 +25,11 @@ public class FileArrayDemo {
 			myArray.readArray(
 					"MyNumbers.txt",
 					test);
-			display(
+			FileArray.display(
 					test);
 		} catch (IOException e) {
 			System.out.println(
 					"Error = " + e.getMessage());
 		}
-	}
-
-	private static void display(
-			int[] test) {
-		// Display the characters.
-		System.out.println(
-				"The numbers read from the file are:");
-		for (int i = 0; i < test.length; i++)
-			System.out.print(
-					test[i] + " ");
 	}
 }
