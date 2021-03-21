@@ -41,10 +41,9 @@ public class FileArray {
 	public static void readArray(String filename,
 			int[] array) throws IOException {
 		// Open the file.
-		FileInputStream fstream = new FileInputStream(
-				filename);
 		DataInputStream outFile = new DataInputStream(
-				fstream);
+				new FileInputStream(
+						filename));
 		// Read values from the array.
 		for (int index = 0; index < array.length; index++)
 			array[index] = outFile.readInt();
