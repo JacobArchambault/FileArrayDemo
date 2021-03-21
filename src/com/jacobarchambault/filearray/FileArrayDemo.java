@@ -13,11 +13,12 @@ public class FileArrayDemo {
 
 		try {
 			// Write the array to the file MyNumbers.txt.
-			FileArray.writeArray(
+			FileArray myArray = new FileArray();
+			myArray.writeArray(
 					"MyNumbers.txt",
 					new int[] {1, 2, 3, 4, 5, 6, 7, 8});
 			// Read the contents of the file into the test array.
-			FileArray.readArray(
+			myArray.readArray(
 					"MyNumbers.txt",
 					test);
 			// Display the characters.

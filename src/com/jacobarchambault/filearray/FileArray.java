@@ -18,7 +18,7 @@ public class FileArray {
 	 * @param array    The array to write.
 	 * @exception IOException When an IO error occurs.
 	 */
-	public static void writeArray(String filename,
+	public void writeArray(String filename,
 			int[] array) throws IOException {
 		// Open the file.
 		DataOutputStream outFile = new DataOutputStream(new FileOutputStream(
@@ -38,7 +38,7 @@ public class FileArray {
 	 * @param array    The array to hold the integers.
 	 * @exception IOException When an IO error occurs.
 	 */
-	public static void readArray(String filename,
+	public void readArray(String filename,
 			int[] array) throws IOException {
 		// Open the file.
 		DataInputStream outFile = new DataInputStream(
