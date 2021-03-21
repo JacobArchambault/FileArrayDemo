@@ -22,7 +22,7 @@ public class FileArray {
 			int[] array) throws IOException {
 		// Open the file.
 		DataOutputStream outFile = new DataOutputStream(new FileOutputStream(
-				filename);
+				filename));
 		// Write the array.
 		for (int index = 0; index < array.length; index++)
 			outFile.writeInt(array[index]);
