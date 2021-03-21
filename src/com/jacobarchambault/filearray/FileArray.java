@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutput;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * The FileArray class works with files and arrays for the FileArray Class
@@ -41,16 +42,16 @@ public class FileArray {
 	 */
 	public void readArray(
 			String filename,
-			int[] array) throws IOException {
+			List<Integer> array) throws IOException {
 		// Open the file.
-		try(DataInputStream outFile = new DataInputStream(
+		try (DataInputStream outFile = new DataInputStream(
 				new FileInputStream(
-						filename))){
+						filename))) {
 			// Read values from the array.
-			for (int index = 0; index < array.length; index++)
-				array[index] = outFile.readInt();			
-		}
-		catch (IOException e) {
+			for (int index = 0; index < array.size(); index++)
+				array.add(
+						outFile.readInt());
+		} catch (IOException e) {
 			System.out.println(
 					"Error = " + e.getMessage());
 		}

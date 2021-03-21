@@ -3,6 +3,8 @@ package com.jacobarchambault.filearray;
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This program demonstrates a solution to theFileArray Class programming
@@ -11,7 +13,7 @@ import java.io.IOException;
 public class FileArrayDemo {
 	public static void main(
 			String[] args) {
-		int[] test = new int[8];
+		List<Integer> test = new ArrayList<Integer>(8);
 
 		try {
 			// Write the array to the file MyNumbers.txt.
@@ -25,8 +27,8 @@ public class FileArrayDemo {
 			myArray.readArray(
 					"MyNumbers.txt",
 					test);
-			FileArray.display(
-					test);
+//			FileArray.display(
+//					test);
 		} catch (IOException e) {
 			System.out.println(
 					"Error = " + e.getMessage());
