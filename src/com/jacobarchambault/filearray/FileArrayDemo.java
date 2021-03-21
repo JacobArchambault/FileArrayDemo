@@ -1,5 +1,7 @@
 package com.jacobarchambault.filearray;
 
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -13,9 +15,9 @@ public class FileArrayDemo {
 
 		try {
 			// Write the array to the file MyNumbers.txt.
-			FileArray myArray = new FileArray();
+			FileArray myArray = new FileArray(new DataOutputStream(new FileOutputStream(
+					"MyNumbers.txt")));
 			myArray.writeArray(
-					"MyNumbers.txt",
 					new int[] {1, 2, 3, 4, 5, 6, 7, 8});
 			// Read the contents of the file into the test array.
 			myArray.readArray(

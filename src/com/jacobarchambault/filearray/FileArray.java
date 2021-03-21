@@ -11,6 +11,13 @@ import java.io.IOException;
  * programming challenge.
  */
 public class FileArray {
+	DataOutputStream outFile;
+
+	FileArray(
+			DataOutputStream outFile) {
+		this.outFile = outFile;
+	}
+
 	/**
 	 * The writeArray method writes an int array to a file.
 	 * 
@@ -18,14 +25,12 @@ public class FileArray {
 	 * @param array    The array to write.
 	 * @exception IOException When an IO error occurs.
 	 */
-	public void writeArray(String filename,
+	public void writeArray(
 			int[] array) throws IOException {
-		// Open the file.
-		DataOutputStream outFile = new DataOutputStream(new FileOutputStream(
-				filename));
 		// Write the array.
 		for (int index = 0; index < array.length; index++)
-			outFile.writeInt(array[index]);
+			outFile.writeInt(
+					array[index]);
 
 		// Close the file.
 		outFile.close();
@@ -38,7 +43,8 @@ public class FileArray {
 	 * @param array    The array to hold the integers.
 	 * @exception IOException When an IO error occurs.
 	 */
-	public void readArray(String filename,
+	public void readArray(
+			String filename,
 			int[] array) throws IOException {
 		// Open the file.
 		DataInputStream outFile = new DataInputStream(
