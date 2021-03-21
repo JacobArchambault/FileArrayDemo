@@ -43,15 +43,17 @@ public class FileArray {
 			String filename,
 			int[] array) throws IOException {
 		// Open the file.
-		DataInputStream outFile = new DataInputStream(
+		try(DataInputStream outFile = new DataInputStream(
 				new FileInputStream(
-						filename));
-		// Read values from the array.
-		for (int index = 0; index < array.length; index++)
-			array[index] = outFile.readInt();
-
-		// Close the file.
-		outFile.close();
+						filename))){
+			// Read values from the array.
+			for (int index = 0; index < array.length; index++)
+				array[index] = outFile.readInt();			
+		}
+		catch (IOException e) {
+			System.out.println(
+					"Error = " + e.getMessage());
+		}
 	}
 
 	static void display(
