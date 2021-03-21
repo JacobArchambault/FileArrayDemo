@@ -24,7 +24,7 @@ public class FileArrayDemo {
 			myArray.write(
 					new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
 			// Read the contents of the file into the test array.
-			myArray.readArray(
+			NumberArray.readArray(
 					"MyNumbers.txt",
 					test);
 //			FileArray.display(
