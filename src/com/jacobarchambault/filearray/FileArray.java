@@ -1,9 +1,8 @@
 package com.jacobarchambault.filearray;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.DataOutput;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -11,10 +10,10 @@ import java.io.IOException;
  * programming challenge.
  */
 public class FileArray {
-	DataOutputStream outFile;
+	DataOutput outFile;
 
 	FileArray(
-			DataOutputStream outFile) {
+			DataOutput outFile) {
 		this.outFile = outFile;
 	}
 
@@ -31,9 +30,6 @@ public class FileArray {
 		for (int index = 0; index < array.length; index++)
 			outFile.writeInt(
 					array[index]);
-
-		// Close the file.
-		outFile.close();
 	}
 
 	/**
