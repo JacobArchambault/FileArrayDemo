@@ -20,7 +20,7 @@ public class FileArrayDemo {
 
 		try {
 			// Write the array to the file MyNumbers.txt.
-			new FileArray(
+			new NumberFile(
 					new DataOutputStream(
 							new FileOutputStream(
 									"MyNumbers.txt"))).write(

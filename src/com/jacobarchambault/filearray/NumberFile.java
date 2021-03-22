@@ -10,10 +10,10 @@ import java.util.List;
  * The FileArray class works with files and arrays for the FileArray Class
  * programming challenge.
  */
-public class FileArray {
+public class NumberFile {
 	DataOutput outFile;
 
-	FileArray(
+	NumberFile(
 			DataOutput outFile) {
 		this.outFile = outFile;
 	}
