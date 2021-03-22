@@ -20,7 +20,7 @@ public class NumberArray {
 	 * @return
 	 * @exception IOException When an IO error occurs.
 	 */
-	List<Integer> fromFile() throws IOException {
+	List<Integer> fromScannerInput() throws IOException {
 		final List<Integer> array = new ArrayList<>();
 		while (scanner.hasNext()) {
 			array.add(

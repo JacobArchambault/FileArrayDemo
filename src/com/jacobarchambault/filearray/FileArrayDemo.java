@@ -25,7 +25,7 @@ public class FileArrayDemo {
 			FileArrayDemo.display(
 					new NumberArray(
 							new Scanner(
-									file)).fromFile());
+									file)).fromScannerInput());
 		} catch (final IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
