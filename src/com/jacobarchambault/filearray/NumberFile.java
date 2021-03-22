@@ -3,6 +3,7 @@ package com.jacobarchambault.filearray;
 import java.io.DataInputStream;
 import java.io.DataOutput;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
@@ -11,11 +12,11 @@ import java.util.List;
  * programming challenge.
  */
 public class NumberFile {
-	DataOutput outFile;
+	FileWriter fileWriter;
 
 	NumberFile(
-			DataOutput outFile) {
-		this.outFile = outFile;
+			FileWriter fileWriter) {
+		this.fileWriter = fileWriter;
 	}
 
 	/**
@@ -28,19 +29,11 @@ public class NumberFile {
 	public void write(
 			int[] array) throws IOException {
 		// Write the array.
-		for (int index = 0; index < array.length; index++)
-			outFile.writeInt(
-					array[index]);
+		for (int i : array) {
+			fileWriter.write(
+					String.valueOf(
+							i) + " ");
+		}
+		fileWriter.close();
 	}
-
-	static void display(
-			int[] test) {
-		// Display the characters.
-		System.out.println(
-				"The numbers read from the file are:");
-		for (int i = 0; i < test.length; i++)
-			System.out.print(
-					test[i] + " ");
-	}
-
 }
