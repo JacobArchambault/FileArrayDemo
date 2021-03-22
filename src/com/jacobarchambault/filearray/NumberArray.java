@@ -19,7 +19,7 @@ public class NumberArray {
 	 * @return 
 	 * @exception IOException When an IO error occurs.
 	 */
-	List<Integer> readArray() {
+	List<Integer> fromFile() {
 		List<Integer> array = new ArrayList<Integer>();
 		// Open the file.
 		while (scanner.hasNextInt()) {
