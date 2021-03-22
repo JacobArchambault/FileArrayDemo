@@ -29,8 +29,7 @@ public class FileArrayDemo {
 			new NumberArray(
 					new Scanner(
 							new File(
-									"MyNumbers.txt"))).readArray(
-											test);
+									"MyNumbers.txt"))).readArray();
 //			FileArray.display(
 //					test);
 		} catch (IOException e) {
