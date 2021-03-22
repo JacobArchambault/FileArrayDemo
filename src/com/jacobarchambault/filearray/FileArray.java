@@ -22,7 +22,7 @@ public class FileArray {
 	 * The writeArray method writes an int array to a file.
 	 * 
 	 * @param filename The name of the file.
-	 * @param array    The array to write.
+	 * @param array    The array to write from.
 	 * @exception IOException When an IO error occurs.
 	 */
 	public void write(

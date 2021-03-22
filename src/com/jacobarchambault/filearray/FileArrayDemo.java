@@ -20,12 +20,11 @@ public class FileArrayDemo {
 
 		try {
 			// Write the array to the file MyNumbers.txt.
-			FileArray myArray = new FileArray(
+			new FileArray(
 					new DataOutputStream(
 							new FileOutputStream(
-									"MyNumbers.txt")));
-			myArray.write(
-					new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
+									"MyNumbers.txt"))).write(
+											new int[] { 1, 2, 3, 4, 5, 6, 7, 8 });
 			// Read the contents of the file into the test array.
 			new NumberArray(
 					new Scanner(
